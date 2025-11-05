@@ -1,122 +1,153 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* PRELOADER */
-  const preloader = document.getElementById("preloader");
-  window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
-    setTimeout(()=> { if(preloader) preloader.style.display = 'none'; }, 600);
-  });
 
-  /* NAVBAR SCROLL EFFECT */
-  const navbar = document.getElementById("mainNavbar");
-  function adjustNavbar() {
-    if(window.scrollY > 50) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
-  }
-  adjustNavbar();
-  window.addEventListener('scroll', adjustNavbar);
+    /**
+     * FEATURE 1: Preloader
+     * --------------------------------------
+     * Fades out the preloader once the window is fully loaded.
+     */
+    const preloader = document.getElementById("preloader");
+    window.addEventListener("load", () => {
+        if (preloader) {
+            document.body.classList.add("loaded");
+            // Wait for fade out animation to finish before hiding
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 500);
+        }
+    });
 
-  /* ACTIVE NAV LINK */
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-    const linkPage = link.getAttribute('href');
-    if(linkPage && (linkPage === window.location.pathname.split('/').pop() || (linkPage.startsWith('#') && location.hash === linkPage))) {
-      link.classList.add('active');
+    /**
+     * FEATURE 2: Frosted Navbar Scroll Effect
+     * --------------------------------------
+     * Adds a 'scrolled' class to the navbar when the page is scrolled down.
+     */
+    const navbar = document.getElementById("mainNavbar");
+    if (navbar) {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        };
+        // Run on load
+        handleScroll();
+        // Run on scroll
+        window.addEventListener("scroll", handleScroll);
     }
-  });
 
-  /* INTERSECTION OBSERVER: animate on scroll */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
+    /**
+     * FEATURE 3: Active Navigation Link Highlighting
+     * ----------------------------------------------
+     * Automatically adds an 'active' class to the nav link
+     * that matches the current page.
+     */
+    const currentPage = window.location.pathname.split('/').pop() || "index.html";
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href').split('/').pop();
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+        }
     });
-  }, {threshold:0.12});
-  document.querySelectorAll('.animate-on-scroll, .animate-hero').forEach(el => observer.observe(el));
 
-  /* PARALLAX for images */
-  const parallaxImages = document.querySelectorAll('.parallax-image');
-  function applyParallax(){
-    const top = window.scrollY, h = window.innerHeight;
-    parallaxImages.forEach(img => {
-      const rect = img.getBoundingClientRect();
-      const elementMid = rect.top + rect.height/2;
-      const progress = (h/2 - elementMid) / (h/2);
-      img.style.transform = `translateY(${progress * 12}px)`;
-    });
-  }
-  window.addEventListener('scroll', applyParallax);
-  applyParallax();
+    /**
+     * FEATURE 4: Scroll-Triggered Animations
+     * --------------------------------------
+     * Uses IntersectionObserver to add a 'is-visible' class
+     * to elements when they enter the viewport.
+     */
+    const scrollElements = document.querySelectorAll(".animate-on-scroll");
 
-  /* DYNAMIC YEAR */
-  const yearSpan = document.getElementById('current-year');
-  if(yearSpan) yearSpan.textContent = new Date().getFullYear();
-
-  /* BOOTSTRAP CAROUSELS */
-  const productCarouselEl = document.querySelector("#productCarousel");
-  if(productCarouselEl) new bootstrap.Carousel(productCarouselEl, {interval:5000});
-  const testimonialCarouselEl = document.querySelector("#testimonialCarousel");
-  if(testimonialCarouselEl) new bootstrap.Carousel(testimonialCarouselEl, {interval:6000});
-
-  /* PRODUCT MODAL WIRING */
-  const modalEl = document.getElementById('productModal');
-  const productModal = new bootstrap.Modal(modalEl);
-  document.querySelectorAll('.product-card-glass .view-product').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const card = btn.closest('.product-card-glass');
-      if(!card) return;
-      const data = card.dataset.product ? JSON.parse(card.dataset.product) : {};
-      document.getElementById('productModalTitle').textContent = data.title || 'Product';
-      document.getElementById('productModalDesc').textContent = data.desc || '';
-      const img = card.querySelector('.card-img-top');
-      document.getElementById('productModalImage').src = img ? img.src : 'https://images.unsplash.com/photo-1516253593875-bd7c038363a0?q=80&w=1600';
-      productModal.show();
-    });
-  });
-
-  /* HERO PARTICLES (lightweight) */
-  const canvas = document.getElementById('hero-particles');
-  if(canvas){
-    const ctx = canvas.getContext('2d');
-    let w, h, particles=[];
-    function resize(){ w = canvas.width = canvas.offsetWidth; h = canvas.height = canvas.offsetHeight; }
-    function initParticles(){
-      particles = [];
-      for(let i=0;i<40;i++){
-        particles.push({
-          x: Math.random()*w,
-          y: Math.random()*h,
-          r: 0.6 + Math.random()*2.2,
-          vx: (Math.random()-0.5)*0.15,
-          vy: -0.15 - Math.random()*0.25,
-          alpha: 0.06 + Math.random()*0.2
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
         });
-      }
-    }
-    function step(){
-      ctx.clearRect(0,0,w,h);
-      particles.forEach(p => {
-        p.x += p.vx; p.y += p.vy;
-        if(p.y < -10) { p.y = h + 10; p.x = Math.random()*w; }
-        ctx.beginPath();
-        ctx.fillStyle = `rgba(255,255,255,${p.alpha})`;
-        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.fill();
-      });
-      requestAnimationFrame(step);
-    }
-    function start(){ resize(); initParticles(); step(); }
-    window.addEventListener('resize', ()=>{ resize(); });
-    start();
-  }
-
-  /* SMOOTH SCROLL for anchor links */
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }, {
+        threshold: 0.1 // Trigger when 10% of the element is visible
     });
-  });
+
+    scrollElements.forEach(el => {
+        observer.observe(el);
+    });
+
+    /**
+     * FEATURE 5: Parallax Image Effect
+     * --------------------------------
+     * Uses a 'scroll' event listener to move images
+     * at a different speed than the page.
+     */
+    const parallaxImages = document.querySelectorAll(".parallax-image");
+    const parallaxSpeed = 0.2; // How slow the image moves
+
+    function applyParallax() {
+        const viewportTop = window.scrollY;
+        const viewportHeight = window.innerHeight;
+
+        parallaxImages.forEach(img => {
+            // Check if parentElement exists before getting bounding rect
+            if (img.parentElement) {
+                const rect = img.parentElement.getBoundingClientRect();
+                const elementTop = rect.top + viewportTop;
+                const elementHeight = rect.height;
+
+                // Check if element is roughly in viewport
+                if ((elementTop + elementHeight) > viewportTop && elementTop < (viewportTop + viewportHeight)) {
+                    // Calculate progress (0 at bottom of viewport, 1 at top)
+                    const progress = (viewportTop + viewportHeight - elementTop) / (viewportHeight + elementHeight);
+                    // Apply a non-linear transform for a smoother effect
+                    const yOffset = (progress - 0.5) * elementHeight * parallaxSpeed * 2; 
+                    
+                    img.style.transform = `translateY(${yOffset}px)`;
+                }
+            }
+        });
+    }
+
+    window.addEventListener("scroll", applyParallax);
+    applyParallax(); // Run once on load
+
+    /**
+     * FEATURE 6: Dynamic Copyright Year
+     * ---------------------------------
+     * Automatically updates the year in the footer.
+     */
+     const yearSpan = document.getElementById("current-year");
+     if (yearSpan) {
+         yearSpan.textContent = new Date().getFullYear();
+     }
+
+    /**
+     * FEATURE 7: Initialize Bootstrap Carousels
+     * ---------------------------------
+     * Finds all carousels and initializes them.
+     */
+    const productCarouselEl = document.querySelector("#productCarousel");
+    if (productCarouselEl) {
+        new bootstrap.Carousel(productCarouselEl, {
+            interval: 5000, // 5 seconds
+            ride: 'carousel'
+        });
+    }
+
+    const testimonialCarouselEl = document.querySelector("#testimonialCarousel");
+    if (testimonialCarouselEl) {
+        new bootstrap.Carousel(testimonialCarouselEl, {
+            interval: 6000, // 6 seconds
+            ride: 'carousel'
+        });
+    }
+
+    const productImageCarouselEl = document.querySelector("#productImageCarousel");
+    if (productImageCarouselEl) {
+        new bootstrap.Carousel(productImageCarouselEl, {
+            interval: 4000, // 4 seconds
+            ride: 'carousel'
+        });
+    }
 
 });

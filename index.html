@@ -1,287 +1,368 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Shalibhadra Traders — Premium Agro Exporters</title>
-  <meta name="description" content="Shalibhadra Traders — Trusted agro exporter since 1993. Clean processing, direct farmer sourcing, bulk supply, global logistics." />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- === SEO === -->
+    <title>Shalibhadra Traders - Premium Spice Suppliers & Exporters</title>
+    <meta name="description" content="Welcome to Shalibhadra Traders, a trusted supplier of premium Cumin, Carom, and Mustard seeds since 1993. We specialize in direct farmer sourcing and bulk FMCG supply.">
+    <link rel="canonical" href="https://www.yourdomain.com/index.html">
+    <link rel="icon" href="https://placehold.co/32x32/D4AF37/121212?text=ST" type="image/png">
+
+    <!-- === Open Graph (for Social Sharing) === -->
+    <meta property="og:title" content="Shalibhadra Traders - Premium Spice Suppliers">
+    <meta property="og:description" content="Trusted supplier of Cumin, Carom, and Mustard seeds. Direct farmer sourcing & in-house Sortex processing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourdomain.com/index.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516253593875-bd7c038363a0?q=80&w=1200&fit=crop">
+
+    <!-- === STYLES === -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- PRELOADER -->
-  <div id="preloader"><div class="spinner"></div></div>
-
-  <!-- NAV -->
-  <header class="fixed-top">
-    <nav id="mainNavbar" class="navbar navbar-expand-lg frosted-nav">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 2c2.7 0 5 2.3 5 5 0 3.4-5 9-5 9s-5-5.6-5-9c0-2.7 2.3-5 5-5z" fill="#198754"/></svg>
-          <div>
-            <div class="fw-bold">Shalibhadra</div>
-            <small class="text-muted d-block">Premium Agro Exporter</small>
-          </div>
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
-            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#products-preview">Products</a></li>
-            <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            <li class="nav-item ms-lg-3"><a class="btn btn-primary-green" href="contact.html">Get Quote</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- HERO -->
-  <section id="hero" class="d-flex align-items-center justify-content-center">
-    <div id="hero-bg"></div>
-    <div id="hero-overlay"></div>
-    <div class="container text-center" id="hero-content">
-      <h1 class="hero-title animate-hero">From Farm to Global Markets — <span class="text-green">Trust & Purity</span></h1>
-      <p class="lead text-white mb-4 animate-hero" style="animation-delay: 0.08s;">
-        30+ years of farmer-sourced spices, processed in modern Sortex plants — exported worldwide.
-      </p>
-      <div class="d-flex justify-content-center gap-3 animate-hero" style="animation-delay: 0.16s;">
-        <a href="#products-preview" class="btn btn-outline-light btn-lg">Explore Products</a>
-        <a href="contact.html" class="btn btn-primary-green btn-lg">Request Bulk Quote</a>
-      </div>
-
-      <!-- quick badges -->
-      <div class="hero-badges mt-5 animate-hero" style="animation-delay:0.26s;">
-        <span class="badge bg-white text-dark me-2">GMP & Hygiene</span>
-        <span class="badge bg-white text-dark me-2">Sortex Cleaned</span>
-        <span class="badge bg-white text-dark">Global Logistics</span>
-      </div>
+    <!-- ======== PRELOADER ======== -->
+    <div id="preloader">
+        <div class="spinner"></div>
     </div>
 
-    <!-- subtle particles canvas -->
-    <canvas id="hero-particles"></canvas>
-  </section>
-
-  <!-- PRODUCTS PREVIEW -->
-  <section id="products-preview" class="py-6">
-    <div class="container">
-      <div class="text-center mb-5 animate-on-scroll">
-        <span class="text-green fw-semibold">Our Range</span>
-        <h2 class="display-4 fw-bold mt-2">Premium Spices & Seeds for Global Buyers</h2>
-      </div>
-
-      <div class="row g-4">
-        <!-- Product card template -->
-        <div class="col-md-6 col-lg-4">
-          <article class="product-card-glass animate-on-scroll" data-product='{"title":"Cumin Seed","desc":"Uniform, high-oil cumin for flavor & aroma. Export-grade packaging available."}'>
-            <img src="https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?q=80&w=1600" class="card-img-top" alt="Cumin">
-            <div class="card-body">
-              <h5 class="card-title">Cumin Seed</h5>
-              <p class="card-text">High-aroma, export-grade cumin — cleaned & tested for quality.</p>
-              <div class="mt-3 d-flex align-items-center justify-content-between">
-                <a class="btn-ghost-green btn-sm view-product" href="#" role="button">View details</a>
-                <small class="text-muted">MOQ: 1 MT</small>
-              </div>
+    <!-- ======== REUSABLE HEADER ======== -->
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg frosted-nav" id="mainNavbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <span class="text-gold">Shalibhadra</span> Traders
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-primary-gold" href="contact.html">Get Quote</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </article>
-        </div>
+        </nav>
+    </header>
+    <!-- ======== END REUSABLE HEADER ======== -->
 
-        <div class="col-md-6 col-lg-4">
-          <article class="product-card-glass animate-on-scroll" data-product='{"title":"Mustard Seed","desc":"Bright, consistent mustard seeds sourced from trusted farms."}'>
-            <img src="https://images.unsplash.com/photo-1542444459-db7a4bf93083?q=80&w=1600" class="card-img-top" alt="Mustard">
-            <div class="card-body">
-              <h5 class="card-title">Mustard Seed</h5>
-              <p class="card-text">Perfect for crushing & oil extraction — export packaging ready.</p>
-              <div class="mt-3 d-flex align-items-center justify-content-between">
-                <a class="btn-ghost-green btn-sm view-product" href="#">View details</a>
-                <small class="text-muted">MOQ: 1 MT</small>
-              </div>
+    <main>
+        <!-- 1. HERO SECTION (Video Background) -->
+        <section id="hero">
+            <video id="hero-video" poster="https://images.unsplash.com/photo-1600955941682-7f6ee6a8c634?q=80&w=1920&fit=crop" autoplay loop muted playsinline>
+                <source src="https://cdn.coverr.co/videos/coverr-spices-on-a-wooden-board-5694/1080p.mp4" type="video/mp4">
+            </video>
+            <div id="hero-overlay"></div>
+            <div id="hero-content" class="container text-center">
+                <div class="animate-hero">
+                    <h1 class="hero-title">
+                        Delivering Only Excellence
+                        <br>
+                        <span class="text-gold">Premium Spice Suppliers</span>
+                    </h1>
+                </div>
+                <div class="animate-hero" style="animation-delay: 0.2s;">
+                    <p class="lead text-light-emphasis my-4">
+                        Established in 1993, driven by honesty, quality, and long-term relationships.
+                    </p>
+                </div>
+                <div class="animate-hero" style="animation-delay: 0.4s;">
+                    <a href="products.html" class="btn btn-primary-gold btn-lg me-2">Our Products</a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
+                </div>
             </div>
-          </article>
-        </div>
+        </section>
 
-        <div class="col-md-6 col-lg-4">
-          <article class="product-card-glass animate-on-scroll" data-product='{"title":"Carom (Ajwain)","desc":"Fresh ajwain with strong essential oils — cleaned & size-graded."}'>
-            <img src="https://images.unsplash.com/photo-1604908177522-6b2b8c8a80c6?q=80&w=1600" class="card-img-top" alt="Ajwain">
-            <div class="card-body">
-              <h5 class="card-title">Carom (Ajwain)</h5>
-              <p class="card-text">Aromatic ajwain for culinary & industrial buyers.</p>
-              <div class="mt-3 d-flex align-items-center justify-content-between">
-                <a class="btn-ghost-green btn-sm view-product" href="#">View details</a>
-                <small class="text-muted">MOQ: 0.5 MT</small>
-              </div>
+        <!-- 2. ABOUT US PREVIEW (Creative Overlap) -->
+        <section id="about-preview" class="story-section">
+            <div class="container">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="story-image-wrapper animate-on-scroll">
+                            <img src="https://images.unsplash.com/photo-1516253593875-bd7c038363a0?q=80&w=1920&fit=crop" alt="Farmer holding fresh spices" class="img-fluid parallax-image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="story-content-box story-content-right animate-on-scroll">
+                            <span class="text-gold fw-semibold">Introduction</span>
+                            <h2 class="display-4 fw-bold mt-2">Honesty, Quality & Relationships.</h2>
+                            <p class="fs-5 mt-3 text-secondary">
+                                Since 1993, Shalibhadra Traders has been a name built on trust. We specialize in Cumin, Carom, and Mustard seeds, procuring directly from farmers and processing in-house to ensure purity, consistency, and superior quality for our FMCG partners.
+                            </p>
+                            <a href="about.html" class="btn btn-primary-gold mt-4">More About Us</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </article>
-        </div>
+        </section>
 
-      </div> <!-- /row -->
-
-      <div class="text-center mt-5 animate-on-scroll">
-        <a href="products.html" class="btn btn-outline-green btn-lg">See full catalog</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY US -->
-  <section id="why-us" class="py-6 bg-white">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6 animate-on-scroll">
-          <div class="story-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1571757279013-40a0f395b3e6?q=80&w=1600" alt="Processing plant" class="img-fluid parallax-image">
-          </div>
-        </div>
-        <div class="col-lg-6 animate-on-scroll">
-          <div class="story-content-box">
-            <span class="text-green fw-semibold">Why Shalibhadra</span>
-            <h3 class="fw-bold mt-2">From farmer fields to export docks — consistent quality at scale.</h3>
-            <p class="text-secondary fs-5 mt-3">We combine transparent farmer sourcing, modern processing (Sortex & cleaning), and verified logistics to deliver on time, every time.</p>
-            <ul class="why-us-list mt-4">
-              <li>Direct Farmer Contracts — traceability guaranteed</li>
-              <li>30 TPD Sortex Processing — uniform & hygienic</li>
-              <li>Third-party lab tests & QC for every lot</li>
-              <li>Flexible export packaging & custom labeling</li>
-            </ul>
-            <div class="mt-4">
-              <a class="btn btn-primary-green" href="contact.html">Contact Export Team</a>
+        <!-- 3. PRODUCTS PREVIEW (Carousel) -->
+        <section id="products-preview" class="py-5 py-lg-6">
+            <div class="container">
+                <div class="text-center mb-5 animate-on-scroll">
+                    <span class="text-gold fw-semibold">Commodity Portfolio</span>
+                    <h2 class="display-4 fw-bold mt-2">Our Expertise in Spices</h2>
+                </div>
+                
+                <div id="productCarousel" class="carousel slide animate-on-scroll" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-4 justify-content-center">
+                                <div class="col-md-6 col-lg-4 d-flex">
+                                    <a href="product-detail.html" class="product-card-glass">
+                                        <div class="card-img-wrapper">
+                                            <img src="https://images.unsplash.com/photo-1610385930602-a162f2f75fbe?q=80&w=800&fit=crop" alt="Cumin Seed (Jeera)" class="card-img-top">
+                                        </div>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Cumin Seed (Jeera)</h3>
+                                            <p class="card-text text-secondary">Procured from APMC Mandal, ensuring complete traceability and natural aroma.</p>
+                                            <span class="btn-outline-gold mt-auto">View Details</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 col-lg-4 d-none d-md-flex">
+                                    <a href="product-detail.html" class="product-card-glass">
+                                        <div class="card-img-wrapper">
+                                            <img src="https://images.unsplash.com/photo-1620921021711-2f8f3c7f9c2d?q=80&w=800&fit=crop" alt="Carom Seed (Ajwain)" class="card-img-top">
+                                        </div>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Carom Seed (Ajwain)</h3>
+                                            <p class="card-text text-secondary">Known for intense pungent taste, rich thymol content, and medicinal value.</p>
+                                            <span class="btn-outline-gold mt-auto">View Details</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 col-lg-4 d-none d-lg-flex">
+                                    <a href="product-detail.html" class="product-card-glass">
+                                        <div class="card-img-wrapper">
+                                            <img src="https://images.unsplash.com/photo-1582295096131-27cf11b7f2de?q=80&w=800&fit=crop" alt="Black Mustard Seed (Rai)" class="card-img-top">
+                                        </div>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Black Mustard Seed (Rai)</h3>
+                                            <p class="card-text text-secondary">Sourced from APMC KARJAN, known for strong pungency and high oil content.</p>
+                                            <span class="btn-outline-gold mt-auto">View Details</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 (Mirror for demo) -->
+                        <div class="carousel-item">
+                            <div class="row g-4 justify-content-center">
+                                <div class="col-md-6 col-lg-4 d-none d-lg-flex">
+                                    <a href="product-detail.html" class="product-card-glass">
+                                        <div class="card-img-wrapper">
+                                            <img src="https://images.unsplash.com/photo-1582295096131-27cf11b7f2de?q=80&w=800&fit=crop" alt="Black Mustard Seed (Rai)" class="card-img-top">
+                                        </div>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Black Mustard Seed (Rai)</h3>
+                                            <p class="card-text text-secondary">Sourced from APMC KARJAN, known for strong pungency and high oil content.</p>
+                                            <span class="btn-outline-gold mt-auto">View Details</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 col-lg-4 d-flex">
+                                    <a href="product-detail.html" class="product-card-glass">
+                                        <div class="card-img-wrapper">
+                                            <img src="https://images.unsplash.com/photo-1610385930602-a162f2f75fbe?q=80&w=800&fit=crop" alt="Cumin Seed (Jeera)" class="card-img-top">
+                                        </div>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Cumin Seed (Jeera)</h3>
+                                            <p class="card-text text-secondary">Procured from APMC Mandal, ensuring complete traceability and natural aroma.</p>
+                                            <span class="btn-outline-gold mt-auto">View Details</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 col-lg-4 d-none d-md-flex">
+                                    <a href="product-detail.html" class="product-card-glass">
+                                        <div class="card-img-wrapper">
+                                            <img src="https://images.unsplash.com/photo-1620921021711-2f8f3c7f9c2d?q=80&w=800&fit=crop" alt="Carom Seed (Ajwain)" class="card-img-top">
+                                        </div>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Carom Seed (Ajwain)</h3>
+                                            <p class="card-text text-secondary">Known for intense pungent taste, rich thymol content, and medicinal value.</p>
+                                            <span class="btn-outline-gold mt-auto">View Details</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" class="py-5 testimonial-section">
-    <div class="container">
-      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="testimonial-card">
-              <p>"High-quality shipment, on-time customs clearance — great trade partner."</p>
-              <small class="d-block mt-3">— Global Foods Ltd., UAE</small>
+        <!-- 4. WHY US PREVIEW (Creative Overlap) -->
+        <section id="why-us-preview" class="story-section">
+            <div class="container">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-6 order-lg-last">
+                        <div class="story-image-wrapper animate-on-scroll">
+                            <img src="https://images.unsplash.com/photo-1509358271058-f6084b31f2b6?q=80&w=1920&fit=crop" alt="Bulk spice orders in a warehouse" class="img-fluid parallax-image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="story-content-box story-content-left animate-on-scroll">
+                            <span class="text-gold fw-semibold">Our Commitment</span>
+                            <h2 class="display-4 fw-bold mt-2">Why Choose Shalibhadra?</h2>
+                            <p class="fs-5 mt-3 text-secondary">
+                                We are more than just traders. We are your partners in quality, from the farm to your facility.
+                            </p>
+                            <ul class="why-us-list fs-5 mt-4">
+                                <li><strong>30+ Years of Trust & Experience</strong></li>
+                                <li><strong>Superior processing</strong> & packaging standards</li>
+                                <li>Ability to handle <strong>bulk orders</strong> with consistency</li>
+                            </ul>
+                            <a href="about.html#why-us" class="btn btn-primary-gold mt-4">Learn More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="testimonial-card">
-              <p>"Reliable quality, transparent communication — we trust their supply chain."</p>
-              <small class="d-block mt-3">— SpiceWorks, UK</small>
+        </section>
+
+        <!-- 5. TESTIMONIALS (Carousel) -->
+        <section id="testimonials" class="testimonial-section py-5 py-lg-6">
+            <div class="container">
+                <div class="text-center mb-5 animate-on-scroll">
+                    <span class="text-gold fw-semibold">Our Partners</span>
+                    <h2 class="display-4 fw-bold mt-2">Trusted by FMCG Leaders</h2>
+                </div>
+                <div id="testimonialCarousel" class="carousel slide animate-on-scroll" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial-card">
+                                <p class="fs-4 fst-italic">"Shalibhadra's consistency in quality and their on-time delivery is unmatched. They are a reliable partner for our bulk Cumin requirements."</p>
+                                <h5 class="mt-4 mb-0">Procurement Head</h5>
+                                <span class="text-secondary">Major FMCG Brand</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <p class="fs-4 fst-italic">"The purity and thymol content in their Carom seeds are consistently high. Their direct-from-farm model makes all the difference."</p>
+                                <h5 class="mt-4 mb-0">Quality Assurance Manager</h5>
+                                <span class="text-secondary">Leading Spice Manufacturer</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <p class="fs-4 fst-italic">"We've partnered with Shalibhadra Traders for over a decade. Their ethical practices and ability to handle large orders make them invaluable."</p>
+                                <h5 class="mt-4 mb-0">Supply Chain Director</h5>
+                                <span class="text-secondary">National Retail Chain</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+        </section>
+    </main>
+
+    <!-- ======== REUSABLE FOOTER (NEW DESIGN) ======== -->
+    <footer id="footer" class="footer-section">
+        <div class="footer-top-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#1a1a1a" fill-opacity="1" d="M0,64L80,80C160,96,320,128,480,117.3C640,107,800,53,960,42.7C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+            </svg>
         </div>
-        <div class="carousel-indicators mt-3">
-          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-5 text-center">
-    <div class="container">
-      <h3 class="fw-bold animate-on-scroll">Ready to partner for large-scale supply?</h3>
-      <p class="text-secondary animate-on-scroll">Get a tailored export quote and sample pack.</p>
-      <a class="btn btn-primary-green btn-lg animate-on-scroll" href="contact.html">Request Quote</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer id="footer" class="footer-section">
-    <div class="footer-top-wave">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path fill="#1a1a1a" d="M0,64L80,80C160,96,320,128,480,117.3C640,107,800,53,960,42.7C1120,32,1280,64,1360,80L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-      </svg>
-    </div>
-
-    <div class="footer-content pt-5 pb-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-4">
-            <h5 class="navbar-brand fs-4"><span class="text-green">Shalibhadra</span> Traders</h5>
-            <p class="text-secondary small">Delivering trust & quality across India and beyond since 1993.</p>
-            <p class="text-secondary small"><strong>Sister Concerns:</strong> Dharmin Traders, Gautam Traders</p>
-          </div>
-          <div class="col-lg-2 mb-4">
-            <h5 class="text-light mb-3">Products</h5>
-            <ul class="list-unstyled footer-links">
-              <li><a href="product-detail.html">Cumin Seed</a></li>
-              <li><a href="product-detail.html">Carom Seed</a></li>
-              <li><a href="product-detail.html">Mustard Seed</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 mb-4">
-            <h5 class="text-light mb-3">Quick Links</h5>
-            <ul class="list-unstyled footer-links">
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="about.html#process">Our Process</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 mb-4">
-            <h5 class="text-light mb-3">Contact Us</h5>
-            <ul class="list-unstyled footer-links">
-              <li><a href="tel:+919408348629">+91 94083 48629</a></li>
-              <li><a href="mailto:shalibhadratraders1660@gmail.com">shalibhadratraders1660@gmail.com</a></li>
-              <li><p class="text-secondary small">APMC Mandal, Gujarat, India</p></li>
-            </ul>
-          </div>
-        </div>
-
-        <hr class="border-secondary-subtle">
-        <div class="text-center text-secondary small">© <span id="current-year"></span> Shalibhadra Traders. All rights reserved.</div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- PRODUCT DETAILS MODAL -->
-  <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0 shadow-lg">
-        <div class="modal-header border-0">
-          <h5 id="productModalTitle" class="modal-title"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p id="productModalDesc" class="text-secondary"></p>
-          <div class="row">
-            <div class="col-md-6">
-              <table class="table">
-                <tbody>
-                  <tr><th>MOQ</th><td>0.5 - 1 MT</td></tr>
-                  <tr><th>Packing</th><td>Jute Bags / PP Bag / Bulk</td></tr>
-                  <tr><th>Processing</th><td>Sortex cleaned, graded</td></tr>
-                </tbody>
-              </table>
+        <div class="footer-content pt-5 pb-4">
+            <div class="container">
+                <div class="row">
+                    <!-- Column 1: Brand -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <h5 class="navbar-brand fs-4" href="index.html">
+                            <span class="text-gold">Shalibhadra</span> Traders
+                        </h5>
+                        <p class="text-secondary small mt-2">
+                            Delivering trust and quality across India and beyond since 1993.
+                        </p>
+                        <p class="text-secondary small mt-2">
+                            <strong>Sister Concerns:</strong>
+                            Dharmin Traders, Gautam Traders
+                        </p>
+                    </div>
+                    
+                    <!-- Column 2: Products -->
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <h5 class="text-light mb-3">Products</h5>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="product-detail.html">Cumin Seed</a></li>
+                            <li><a href="product-detail.html">Carom Seed</a></li>
+                            <li><a href="product-detail.html">Mustard Seed</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Column 3: Quick Links -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="text-light mb-3">Quick Links</h5>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="about.html#process">Our Process</a></li>
+                            <li><a href="about.html#why-us">Why Choose Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Column 4: Contact -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="text-light mb-3">Contact Us</h5>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="tel:+919408348629">+91 94083 48629</a></li>
+                            <li><a href="mailto:shalibhadratraders1660@gmail.com">shalibhadratraders1660@gmail.com</a></li>
+                            <li><p class="text-secondary small">APMC Mandal, Gujarat, India</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="border-secondary-subtle">
+                <div class="text-center text-secondary small">
+                    © <span id="current-year"></span> Shalibhadra Traders. All rights reserved Aarav Programmes
+                </div>
             </div>
-            <div class="col-md-6">
-              <div class="ratio ratio-16x9">
-                <img id="productModalImage" src="" alt="product" class="img-fluid object-cover">
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="modal-footer border-0">
-          <a href="contact.html" class="btn btn-primary-green">Get Sample & Quote</a>
-        </div>
-      </div>
-    </div>
-  </div>
+    </footer>
+    <!-- ======== END REUSABLE FOOTER ======== -->
 
-  <!-- WHATSAPP -->
-  <a href="https://api.whatsapp.com/send?phone=919408348629" id="whatsapp-button" target="_blank" title="Chat on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0..."/></svg>
-  </a>
+    <!-- ======== FLOATING WHATSAPP BUTTON ======== -->
+    <a href="https://api.whatsapp.com/send?phone=919408348629" id="whatsapp-button" target="_blank" title="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.627-2.961 6.584-6.591 6.584zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05s-1.016-.37-1.928-1.191c-.718-.641-1.2-1.43-1.342-1.667-.142-.236-.012-.358.087-.458.087-.087.197-.232.296-.346.1-.114.133-.197.197-.331.065-.133.034-.248-.015-.347s-.445-1.076-.612-1.47c-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html>
